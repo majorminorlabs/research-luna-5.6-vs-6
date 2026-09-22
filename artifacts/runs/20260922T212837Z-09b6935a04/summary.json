@@ -1,0 +1,33 @@
+{
+  "benchmark_sha256": "ad1fd9a562246f195dc4ce0a14cab02abcd76e868b9f58dbc98fb2e12e77e12d",
+  "benchmark_task_count": 30,
+  "benchmark_version": "luna-comparison-v1.0",
+  "complete": true,
+  "cost_usd_total": null,
+  "error_rate": 0.0,
+  "exact_model_identifiers_returned": [
+    "not_exposed"
+  ],
+  "latency": {
+    "count": 30,
+    "max_ms": 57679.389,
+    "mean_ms": 15005.70186666667,
+    "min_ms": 3935.097
+  },
+  "retries_total": 0,
+  "run_id": "20260922T212837Z-09b6935a04",
+  "scoring_status": "DETERMINISTIC_COMPONENTS_CAPTURED; RUBRIC_AND_PAIRWISE_PENDING",
+  "selected_task_count": 30,
+  "status_counts": {
+    "ERROR": 0,
+    "SUCCESS": 30,
+    "TRUNCATED": 0
+  },
+  "terminal_result_count": 30,
+  "tokens": {
+    "input_total": 421351,
+    "output_total": 12038,
+    "total": 433389
+  },
+  "truncation_rate": 0.0
+}

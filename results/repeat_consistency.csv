@@ -1,0 +1,11 @@
+model,component,task_count,both_scored_count,exact_agreement_rate,mean_absolute_difference
+gpt-5.6-luna,capability_score,30,29,0.6551724137931034,0.0445048865941361
+gpt-5.6-luna,deterministic_score,30,11,1.0,0.0
+gpt-5.6-luna,rubric_score,30,26,1.0,0.0
+gpt-5.6-luna,constraints_score,30,13,0.9230769230769231,0.07692307692307693
+gpt-5.6-luna,pairwise_score,30,29,0.6551724137931034,0.22413793103448276
+gpt-6-luna,capability_score,30,30,0.5333333333333333,0.08769501740089973
+gpt-6-luna,deterministic_score,30,12,1.0,0.0
+gpt-6-luna,rubric_score,30,27,0.8518518518518519,0.07818930041152264
+gpt-6-luna,constraints_score,30,13,0.9230769230769231,0.07692307692307693
+gpt-6-luna,pairwise_score,30,29,0.6551724137931034,0.22413793103448276

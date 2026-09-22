@@ -1,0 +1,17 @@
+{
+  "publication_source_analysis_commit": "6303b82acaca7b79d0a35002315be2ff3dac5a3d",
+  "frozen_benchmark_commit": "de4283d944257b0fdaf15e116309b0df59e6e103",
+  "benchmark_version": "luna-comparison-v1.0",
+  "benchmark_sha256": "ad1fd9a562246f195dc4ce0a14cab02abcd76e868b9f58dbc98fb2e12e77e12d",
+  "scorer_version": "scorers-1.2.0",
+  "canonical_run_ids": [
+    "20260922T210505Z-666f0e58c7",
+    "20260922T212837Z-09b6935a04",
+    "20260922T221739Z-eb57b67d06",
+    "20260922T223440Z-c5ae59da51"
+  ],
+  "primary_generations": 120,
+  "smoke_and_probe_runs_excluded": true,
+  "provider_returned_model": "not_exposed",
+  "chatgpt_picker_equivalence": "unverified"
+}
