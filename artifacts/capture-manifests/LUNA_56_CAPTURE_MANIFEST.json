@@ -1,0 +1,268 @@
+{
+  "benchmark": {
+    "answer_keys_sha256": "0c86e7ba701377743dabf68ab838472bfe2c3d723a02c96a2080562746520553",
+    "expected_tasks_sha256": "ad1fd9a562246f195dc4ce0a14cab02abcd76e868b9f58dbc98fb2e12e77e12d",
+    "frozen_commit": "de4283d944257b0fdaf15e116309b0df59e6e103",
+    "frozen_files_unchanged_from_commit": true,
+    "task_count": 30,
+    "tasks_sha256": "ad1fd9a562246f195dc4ce0a14cab02abcd76e868b9f58dbc98fb2e12e77e12d",
+    "version": "luna-comparison-v1.0"
+  },
+  "capture_identity": {
+    "chatgpt_picker_equivalence": "unverified",
+    "codex_version": "codex-cli 0.153.4",
+    "generation_parameters": "not_exposed",
+    "interface": "codex-cli-chatgpt-oauth",
+    "max_retries": 0,
+    "provider": "codex-cli",
+    "provider_returned_model": "not_exposed",
+    "requested_model": "gpt-5.6-luna",
+    "transport": "codex-cli-chatgpt-oauth"
+  },
+  "generated_at": "2026-09-22T21:50:20.006782Z",
+  "luna6_preparation": {
+    "benchmark_tasks_sent": 0,
+    "current_chatgpt_authenticated_codex_route_accepts_slug": false,
+    "exact_requested_slug": "gpt-6-luna",
+    "official_api_catalog_model_id_exists": true,
+    "probe_artifact": "reports/luna6_transport_probe.json",
+    "probe_artifact_sha256": "17ffdb0e8ca922aa8eb5ea3f91fd99cf5990e3f5190b0b3d0fb9720b2cd39b86"
+  },
+  "manifest_version": "luna-5.6-capture-manifest-1.0.0",
+  "runs": [
+    {
+      "artifact_count": 7,
+      "artifacts": {
+        "errors.jsonl": {
+          "bytes": 2430,
+          "sha256": "2664cc81c7b765abe031361ab2a496178a21110d9dcdb22100a3c1e3ee725e3f"
+        },
+        "metadata.json": {
+          "bytes": 4879,
+          "sha256": "f5a6b866047c1baaf547578d917368c53d308b332eaa82a7273db9f9e831420b"
+        },
+        "raw_execution.jsonl": {
+          "bytes": 123057,
+          "sha256": "827da2e48e71569e838013d241d99033f1de0ba1e4d353e2c4c21e9ce455e224"
+        },
+        "requests.jsonl": {
+          "bytes": 30923,
+          "sha256": "262fef2ba72eac3cdf651fe1e22e40cc7cf40aa8ccdea0c6548d164a883df25a"
+        },
+        "responses.jsonl": {
+          "bytes": 145798,
+          "sha256": "50a8ff66722d84cd697726729f350a73a1a7600e49c08667075411e0672e5069"
+        },
+        "scores.jsonl": {
+          "bytes": 12344,
+          "sha256": "ddba1a63b732a61031e2e56d5eb269b091bd389413554f438bf7fd8a9c45b6a1"
+        },
+        "summary.json": {
+          "bytes": 846,
+          "sha256": "26bf3ad20d3fda27309a672edc33e854f89b1f62d2d967a78d4432dd316acc80"
+        }
+      },
+      "benchmark_task_count": 30,
+      "chatgpt_picker_equivalence": "unverified",
+      "complete": true,
+      "error_tasks": [
+        "REAS-02"
+      ],
+      "git_commit_at_capture": "9cd82df346ec4d9b0501d52314e8176adec4805c",
+      "git_dirty_at_capture": false,
+      "integrity_checks": {
+        "all_attempts_one_and_retries_zero": true,
+        "benchmark_hash_matches_frozen": true,
+        "error_log_matches_terminal_errors": true,
+        "exactly_one_terminal_result_per_selected_task": true,
+        "metadata_run_id_matches_directory": true,
+        "original_scores_are_scorers_1_0_0": true,
+        "prompts_match_frozen_tasks_exactly": true,
+        "provider_returned_identity_and_controls_not_exposed_recorded": true,
+        "raw_prompt_hashes_match_frozen_prompts": true,
+        "request_and_raw_counts_match_selected_tasks": true,
+        "request_raw_response_ids_unique": true,
+        "requested_model_and_transport_match": true,
+        "successful_response_extraction_matches_raw_output_file": true,
+        "successful_response_raw_records_join": true,
+        "task_ids_match_selected_set": true
+      },
+      "interface": "codex-cli-chatgpt-oauth",
+      "max_retries": 0,
+      "provider": "codex-cli",
+      "provider_returned_model": "not_exposed",
+      "requested_model": "gpt-5.6-luna",
+      "role": "primary_repeat_1",
+      "run_id": "20260922T210505Z-666f0e58c7",
+      "scorer_version_original": "scorers-1.0.0",
+      "selected_task_count": 30,
+      "static_audit_note": "Artifact structure proves unique terminal/request/raw IDs and exact joins; filesystem history cannot prove whether a prior write was ever overwritten.",
+      "status_counts": {
+        "ERROR": 1,
+        "SUCCESS": 29,
+        "TRUNCATED": 0
+      },
+      "terminal_result_count": 30,
+      "transport": "codex-cli-chatgpt-oauth"
+    },
+    {
+      "artifact_count": 7,
+      "artifacts": {
+        "errors.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "metadata.json": {
+          "bytes": 4879,
+          "sha256": "997581d96777996e8bea0a9661136471e755218ecfaf0843ceb18742f81d173c"
+        },
+        "raw_execution.jsonl": {
+          "bytes": 125760,
+          "sha256": "0ad00706611a16cd8cd4e32398ad108e3e7e693031e1651b6761d72ea0b2166b"
+        },
+        "requests.jsonl": {
+          "bytes": 30923,
+          "sha256": "15c31dae0bf24db62307ddda4599ec704d14784a755f17d2d3878e6bfd4cb529"
+        },
+        "responses.jsonl": {
+          "bytes": 154960,
+          "sha256": "842ee29b4a63134b84f1a8c926b2f6c3d1180ca8303e61c242e237cb277a2962"
+        },
+        "scores.jsonl": {
+          "bytes": 12340,
+          "sha256": "83bdd4d0e428fd468c5eff37bcdf2728c8a80a3b7a4aa6f5f6a584f25c67aa76"
+        },
+        "summary.json": {
+          "bytes": 829,
+          "sha256": "df8f7fb20feacf812a3f40f15a0a8f643b94eedb34a4978df507a7069a8d1064"
+        }
+      },
+      "benchmark_task_count": 30,
+      "chatgpt_picker_equivalence": "unverified",
+      "complete": true,
+      "error_tasks": [],
+      "git_commit_at_capture": "9cd82df346ec4d9b0501d52314e8176adec4805c",
+      "git_dirty_at_capture": false,
+      "integrity_checks": {
+        "all_attempts_one_and_retries_zero": true,
+        "benchmark_hash_matches_frozen": true,
+        "error_log_matches_terminal_errors": true,
+        "exactly_one_terminal_result_per_selected_task": true,
+        "metadata_run_id_matches_directory": true,
+        "original_scores_are_scorers_1_0_0": true,
+        "prompts_match_frozen_tasks_exactly": true,
+        "provider_returned_identity_and_controls_not_exposed_recorded": true,
+        "raw_prompt_hashes_match_frozen_prompts": true,
+        "request_and_raw_counts_match_selected_tasks": true,
+        "request_raw_response_ids_unique": true,
+        "requested_model_and_transport_match": true,
+        "successful_response_extraction_matches_raw_output_file": true,
+        "successful_response_raw_records_join": true,
+        "task_ids_match_selected_set": true
+      },
+      "interface": "codex-cli-chatgpt-oauth",
+      "max_retries": 0,
+      "provider": "codex-cli",
+      "provider_returned_model": "not_exposed",
+      "requested_model": "gpt-5.6-luna",
+      "role": "primary_repeat_2",
+      "run_id": "20260922T212837Z-09b6935a04",
+      "scorer_version_original": "scorers-1.0.0",
+      "selected_task_count": 30,
+      "static_audit_note": "Artifact structure proves unique terminal/request/raw IDs and exact joins; filesystem history cannot prove whether a prior write was ever overwritten.",
+      "status_counts": {
+        "ERROR": 0,
+        "SUCCESS": 30,
+        "TRUNCATED": 0
+      },
+      "terminal_result_count": 30,
+      "transport": "codex-cli-chatgpt-oauth"
+    },
+    {
+      "artifact_count": 7,
+      "artifacts": {
+        "errors.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "metadata.json": {
+          "bytes": 4470,
+          "sha256": "f5e5d647367a34e7348ac3fd303c8ff96f6c1a85850c454b50d252fadcbd755a"
+        },
+        "raw_execution.jsonl": {
+          "bytes": 10970,
+          "sha256": "a27ed3dbb3a15b032feb4bccd227499d4f3ea3f5d3a83ffcb12bfe444ef3847a"
+        },
+        "requests.jsonl": {
+          "bytes": 3186,
+          "sha256": "8aba73639bd38fa39725df686e241728b5932b50fb7a51458765917ae16a9326"
+        },
+        "responses.jsonl": {
+          "bytes": 12996,
+          "sha256": "37087246c58351e58bdbcf51ff6118c889316e2b5c3b6656274995ec271f9ca2"
+        },
+        "scores.jsonl": {
+          "bytes": 1182,
+          "sha256": "bd66cbbd515443ccad6b42be16a8f4f6fd175a2307e8ce8d4e7f25e2dab78590"
+        },
+        "summary.json": {
+          "bytes": 824,
+          "sha256": "951a1fda9b44b679ccdd9750fcb364a66deff6f0a590646234bacc22fec7afb8"
+        }
+      },
+      "benchmark_task_count": 30,
+      "chatgpt_picker_equivalence": "unverified",
+      "complete": false,
+      "error_tasks": [],
+      "git_commit_at_capture": "9cd82df346ec4d9b0501d52314e8176adec4805c",
+      "git_dirty_at_capture": false,
+      "integrity_checks": {
+        "all_attempts_one_and_retries_zero": true,
+        "benchmark_hash_matches_frozen": true,
+        "error_log_matches_terminal_errors": true,
+        "exactly_one_terminal_result_per_selected_task": true,
+        "metadata_run_id_matches_directory": true,
+        "original_scores_are_scorers_1_0_0": true,
+        "prompts_match_frozen_tasks_exactly": true,
+        "provider_returned_identity_and_controls_not_exposed_recorded": true,
+        "raw_prompt_hashes_match_frozen_prompts": true,
+        "request_and_raw_counts_match_selected_tasks": true,
+        "request_raw_response_ids_unique": true,
+        "requested_model_and_transport_match": true,
+        "successful_response_extraction_matches_raw_output_file": true,
+        "successful_response_raw_records_join": true,
+        "task_ids_match_selected_set": true
+      },
+      "interface": "codex-cli-chatgpt-oauth",
+      "max_retries": 0,
+      "provider": "codex-cli",
+      "provider_returned_model": "not_exposed",
+      "requested_model": "gpt-5.6-luna",
+      "role": "smoke",
+      "run_id": "20260922T210414Z-9ebb21cce7",
+      "scorer_version_original": "scorers-1.0.0",
+      "selected_task_count": 3,
+      "static_audit_note": "Artifact structure proves unique terminal/request/raw IDs and exact joins; filesystem history cannot prove whether a prior write was ever overwritten.",
+      "status_counts": {
+        "ERROR": 0,
+        "SUCCESS": 3,
+        "TRUNCATED": 0
+      },
+      "terminal_result_count": 3,
+      "transport": "codex-cli-chatgpt-oauth"
+    }
+  ],
+  "score_audit": {
+    "change_count": 10,
+    "llm_rubric_or_pairwise_judging_performed": false,
+    "original_score_files_preserved": true,
+    "original_scorer_version": "scorers-1.0.0",
+    "revised_score_files": [
+      "reports/luna56_repeat1_scores-scorers-1.1.0.jsonl",
+      "reports/luna56_repeat2_scores-scorers-1.1.0.jsonl",
+      "reports/luna56_smoke_scores-scorers-1.1.0.jsonl"
+    ],
+    "revised_scorer_version": "scorers-1.1.0",
+    "revised_scores_are_additive": true
+  }
+}

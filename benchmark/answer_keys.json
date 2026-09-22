@@ -1,0 +1,278 @@
+{
+  "schema_version": "luna-comparison-v1.0-answer-keys",
+  "scorer_version": "scorers-1.0.0",
+  "tasks": {
+    "CODE-01": {
+      "kind": "hybrid",
+      "deterministic": {
+        "method": "code01",
+        "final_ids": [1, 3, 5],
+        "root_cause_terms": ["mutation", "iteration"],
+        "required_function_terms": ["for", "cancelled", "remove"]
+      },
+      "rubric": [
+        {"id": "root-cause", "points": 1, "criterion": "Identifies mutation of the list during iteration as the cause."},
+        {"id": "minimal-fix", "points": 1, "criterion": "Provides a small corrected process function that removes every cancelled job without skipping an item."},
+        {"id": "result", "points": 1, "criterion": "States the final IDs as 1, 3, and 5."}
+      ],
+      "constraints": ["Does not rewrite unrelated program behavior."]
+    },
+    "CODE-02": {
+      "kind": "rubric",
+      "rubric": [
+        {"id": "concurrency", "points": 2, "criterion": "Starts independent fetches without serially awaiting each one."},
+        {"id": "ordering", "points": 1, "criterion": "Returns results in the original URL order."},
+        {"id": "cancellation", "points": 2, "criterion": "Cancels and awaits unfinished tasks when one fetch fails."},
+        {"id": "exception", "points": 1, "criterion": "Propagates the original exception after cleanup."},
+        {"id": "scope", "points": 1, "criterion": "Modifies only fetch_all and does not change fetch."}
+      ],
+      "constraints": ["Addresses all four behavioral requirements."]
+    },
+    "CODE-03": {
+      "kind": "rubric",
+      "rubric": [
+        {"id": "normalization", "points": 1, "criterion": "Sorts input and removes duplicates."},
+        {"id": "runs", "points": 2, "criterion": "Compresses runs of three or more and leaves runs of exactly two as separate values."},
+        {"id": "format", "points": 1, "criterion": "Handles negative values and emits comma-separated ascending output."},
+        {"id": "empty", "points": 1, "criterion": "Returns an empty string for empty input."},
+        {"id": "tests", "points": 1, "criterion": "Includes executable tests covering the edge cases requested."}
+      ],
+      "constraints": ["Returns only the function as requested; tests may be described separately only if the response format permits them."]
+    },
+    "CODE-04": {
+      "kind": "rubric",
+      "rubric": [
+        {"id": "customer-preservation", "points": 2, "criterion": "Uses customers as the preserved side of a left join or equivalent so zero-order customers remain."},
+        {"id": "filtering", "points": 2, "criterion": "Filters completed orders and the half-open 2026 date range inside the aggregate input, not in a way that removes customers."},
+        {"id": "aggregates", "points": 2, "criterion": "Returns correct count, total, and latest-date aggregates with sensible zero/null behavior."},
+        {"id": "ordering", "points": 1, "criterion": "Sorts total value descending and customer ID ascending."}
+      ],
+      "constraints": ["Returns one PostgreSQL query only."]
+    },
+    "CODE-05": {
+      "kind": "rubric",
+      "rubric": [
+        {"id": "race", "points": 2, "criterion": "Identifies the concurrent read/check/write race and requires row or equivalent locking."},
+        {"id": "atomicity", "points": 2, "criterion": "Requires one atomic transaction covering both account updates."},
+        {"id": "failure", "points": 2, "criterion": "Ensures a save or transaction failure rolls back both balances rather than leaving a partial transfer."},
+        {"id": "scope", "points": 1, "criterion": "Stays focused on correctness and minimum architectural changes."}
+      ],
+      "constraints": ["Does not spend scoring-relevant space on style, naming, documentation, or performance."]
+    },
+    "CODE-06": {
+      "kind": "rubric",
+      "rubric": [
+        {"id": "deterministic", "points": 3, "criterion": "Selects deterministic logic for DOI parsing, DOI syntax validation, structured-year extraction, confidence intervals, and verbatim quote verification where reliable."},
+        {"id": "llm", "points": 2, "criterion": "Uses an LLM for natural-language relevance, contradiction interpretation, and readable synthesis when appropriate."},
+        {"id": "hybrid", "points": 2, "criterion": "Uses hybrid treatment where deterministic checks and language interpretation complement one another, or gives a defensible task-specific alternative."},
+        {"id": "justification", "points": 1, "criterion": "Gives one concise justification for each of the eight stages."}
+      ],
+      "constraints": ["Chooses exactly one label per stage."]
+    },
+    "REAS-01": {
+      "kind": "deterministic",
+      "deterministic": {"method": "reas01", "assignment": {"Arin": "Y", "Bea": "Z", "Cole": "W", "Dara": "X"}},
+      "rubric": [
+        {"id": "assignment", "points": 1, "criterion": "Gives the unique assignment Arin-Y, Bea-Z, Cole-W, Dara-X."},
+        {"id": "reasoning", "points": 1, "criterion": "Shows enough elimination reasoning to verify uniqueness."}
+      ],
+      "constraints": ["Does not claim multiple solutions after the frozen correction."]
+    },
+    "REAS-02": {
+      "kind": "deterministic",
+      "deterministic": {"method": "reas02", "maximum_sequences": 5, "weight_memory_gib": 12.572854757309, "workspace_gib": 1.508742570877, "fixed_gib": 1.8, "capacity_gib": 18.0, "kv_gib_per_sequence": 0.42},
+      "rubric": [
+        {"id": "calculation", "points": 2, "criterion": "Converts 27 billion 4-bit parameters to bytes and then GiB using the stated definitions."},
+        {"id": "maximum", "points": 1, "criterion": "Reports five simultaneous sequences, not merely a rounded estimate."}
+      ],
+      "constraints": ["Shows the calculation and uses whole-number capacity."]
+    },
+    "REAS-03": {
+      "kind": "rubric",
+      "rubric": [
+        {"id": "observed", "points": 1, "criterion": "States only that A scored five percentage points higher on this reported benchmark."},
+        {"id": "limits", "points": 2, "criterion": "Says the information does not establish real-world software-engineering capability or general superiority."},
+        {"id": "restraint", "points": 2, "criterion": "Does not invent methodology, significance, task composition, or external evidence."}
+      ],
+      "constraints": ["Answers the question directly and remains epistemically restrained."]
+    },
+    "REAS-04": {
+      "kind": "deterministic",
+      "deterministic": {"method": "reas04", "schedules": ["ACEBD"]},
+      "rubric": [
+        {"id": "complete", "points": 1, "criterion": "Returns the complete set of valid schedules."},
+        {"id": "format", "points": 1, "criterion": "Returns schedules only, one per line."}
+      ],
+      "constraints": ["Does not include an invalid or duplicate schedule."]
+    },
+    "REAS-05": {
+      "kind": "rubric",
+      "rubric": [
+        {"id": "binding", "points": 2, "criterion": "Prioritizes checking the service bind address or configuring it to listen beyond 127.0.0.1."},
+        {"id": "network", "points": 2, "criterion": "Tests host firewall, security group, ACL, or equivalent network filtering."},
+        {"id": "port", "points": 1, "criterion": "Uses a remote TCP connection or packet/listener inspection to test reachability to 8080."},
+        {"id": "hypotheses", "points": 2, "criterion": "Explains the hypothesis tested by each action and uses the evidence to rank them."}
+      ],
+      "constraints": ["Provides exactly three useful actions and does not recommend reinstalling."]
+    },
+    "EVID-01": {
+      "kind": "rubric",
+      "rubric": [
+        {"id": "randomized", "points": 2, "criterion": "Treats Study A as evidence consistent with a positive effect and notes its interval excludes zero."},
+        {"id": "observational", "points": 2, "criterion": "Explains that Study B is confounded/observational and its adjusted interval includes no effect."},
+        {"id": "small-trial", "points": 1, "criterion": "Notes Study C is imprecise and compatible with a wide range including no effect."},
+        {"id": "uncertainty", "points": 2, "criterion": "Concludes that a benefit is plausible or supported by some evidence but magnitude, causality across settings, and certainty remain limited."}
+      ],
+      "constraints": ["Maximum 180 words.", "Distinguishes evidence from uncertainty."]
+    },
+    "EVID-02": {
+      "kind": "rubric",
+      "rubric": [
+        {"id": "supported", "points": 2, "criterion": "Places the observed CPU increase, latency increase, unchanged database duration, and validator introduction in supported evidence or equivalent."},
+        {"id": "plausible", "points": 2, "criterion": "Treats validator contribution to latency as plausible but unproven because no profiler or causal comparison exists."},
+        {"id": "unsupported", "points": 2, "criterion": "Does not present CPU overload or definitive causation as established."}
+      ],
+      "constraints": ["Uses the three requested buckets and adds no evidence."]
+    },
+    "EVID-03": {
+      "kind": "deterministic",
+      "deterministic": {"method": "evid03", "expected": {"A": "ENTAILED", "B": "ENTAILED", "C": "NOT ESTABLISHED", "D": "CONTRADICTED", "E": "CONTRADICTED"}},
+      "rubric": [
+        {"id": "classification", "points": 1, "criterion": "Classifies all five claims exactly according to the source."}
+      ],
+      "constraints": ["Returns valid JSON only with no additional keys."]
+    },
+    "EVID-04": {
+      "kind": "rubric",
+      "rubric": [
+        {"id": "definitive", "points": 1, "criterion": "Flags definitive superiority as unsupported by one run without uncertainty analysis."},
+        {"id": "causal", "points": 1, "criterion": "Flags attributing the difference to architecture as unsupported by the design."},
+        {"id": "significance", "points": 1, "criterion": "Flags statistically significant as unsupported because no significance test was calculated."},
+        {"id": "observed", "points": 1, "criterion": "Does not incorrectly reject the observed 91 versus 87 scores or the cost figures."}
+      ],
+      "constraints": ["Identifies unsupported portions without claiming the reported scores are invalid."]
+    },
+    "EVID-05": {
+      "kind": "rubric",
+      "rubric": [
+        {"id": "replication", "points": 2, "criterion": "Uses the controlled result and independent replication as evidence that M outperformed baseline on these tasks."},
+        {"id": "scope", "points": 2, "criterion": "Limits the conclusion to the benchmark/task setting and does not infer broad capability from it."},
+        {"id": "weak-evidence", "points": 1, "criterion": "Treats the developer statement as subjective and the single user report as a useful but anecdotal counterexample."},
+        {"id": "balance", "points": 1, "criterion": "Acknowledges both positive evidence and unresolved generalization/production uncertainty."}
+      ],
+      "constraints": ["Maximum 150 words."]
+    },
+    "EXTR-01": {
+      "kind": "deterministic",
+      "deterministic": {"method": "json_exact", "expected": {"projects": [{"name": "Northstar", "owner": "Priya N.", "value_usd": 18400, "status": "complete", "ship_date": "2026-03-04"}, {"name": "Atlas", "owner": "Marco T.", "value_usd": 7250, "status": "pending", "ship_date": null}, {"name": "Beacon", "owner": "Priya N.", "value_usd": 900, "status": "cancelled", "ship_date": null}]}}
+    },
+    "EXTR-02": {
+      "kind": "deterministic",
+      "deterministic": {"method": "json_exact", "expected": ["10.1000/xyz-123", "10.5555/abc.009", "10.7777/test_42"]}
+    },
+    "EXTR-03": {
+      "kind": "constraint",
+      "deterministic": {"method": "extr03_constraints", "sentence_count": 3, "first_prefix": "An index", "second_term": "tradeoff", "max_words": 65, "forbidden": [";"], "forbidden_concept": "analogy"},
+      "rubric": [
+        {"id": "technical", "points": 2, "criterion": "Accurately explains that an index supports faster lookup/access by maintaining an auxiliary data structure and incurs storage/update cost."},
+        {"id": "example", "points": 1, "criterion": "Gives one concrete database-index example in sentence three."}
+      ]
+    },
+    "EXTR-04": {
+      "kind": "deterministic",
+      "deterministic": {"method": "json_exact", "expected": {"product": "Arbor", "price_usd": 49, "seats": 5}}
+    },
+    "AGENT-01": {
+      "kind": "rubric",
+      "rubric": [
+        {"id": "expand", "points": 2, "criterion": "Adds the nullable column or equivalent in a short, compatible schema step."},
+        {"id": "backfill", "points": 2, "criterion": "Backfills in bounded batches while old and new application versions can coexist."},
+        {"id": "dual-read-write", "points": 2, "criterion": "Deploys compatible application behavior and verifies data before enforcing NOT NULL."},
+        {"id": "contract", "points": 1, "criterion": "Applies the final constraint only after verification and removes compatibility code last."},
+        {"id": "rollback", "points": 2, "criterion": "Keeps rollback possible through verification and states a rollback for every step."}
+      ],
+      "constraints": ["Uses at most eight ordered steps.", "Every step contains ACTION, WHY, and ROLLBACK."]
+    },
+    "AGENT-02": {
+      "kind": "rubric",
+      "rubric": [
+        {"id": "restore", "points": 2, "criterion": "Immediately shifts traffic away from the new release or pauses/rolls back the canary to restore service."},
+        {"id": "preserve", "points": 2, "criterion": "Preserves logs, metrics, deployment identifiers, and comparable evidence before destructive cleanup."},
+        {"id": "diagnose", "points": 2, "criterion": "Checks the new release and relevant error traces against the healthy old release before retrying."},
+        {"id": "safe-state", "points": 1, "criterion": "Recognizes that the additive migration and absence of irreversible writes preserve rollback options."}
+      ],
+      "constraints": ["Gives exactly five ordered actions.", "Does not continue rollout while investigating."]
+    },
+    "AGENT-03": {
+      "kind": "deterministic",
+      "deterministic": {"method": "agent03", "operations": ["SEARCH_ALL_FILES(max_worker_retries)"], "minimum_cost": 3},
+      "rubric": [
+        {"id": "strategy", "points": 1, "criterion": "Uses the deterministic search operation directly."},
+        {"id": "cost", "points": 1, "criterion": "Reports total cost 3."}
+      ],
+      "constraints": ["Does not invoke LIST_DIRECTORY, READ_FILE, or ASK_LLM unnecessarily."]
+    },
+    "AGENT-04": {
+      "kind": "deterministic",
+      "deterministic": {"method": "agent04", "action": "STOP"},
+      "rubric": [
+        {"id": "budget", "points": 1, "criterion": "Recognizes that continuing would exceed the hard budget."},
+        {"id": "sufficiency", "points": 1, "criterion": "Recognizes that minimum sample requirements are already satisfied and more uncertainty reduction is optional."}
+      ],
+      "constraints": ["Chooses exactly one of the three actions.", "Explanation is at most 40 words."]
+    },
+    "CTX-01": {
+      "kind": "deterministic",
+      "deterministic": {"method": "contains_all", "required": ["Team Kestrel", "KeyDB", "65 ms", "CR-4187-K"]},
+      "rubric": [
+        {"id": "synthesis", "points": 1, "criterion": "Combines the four current facts without elevating superseded history."}
+      ],
+      "constraints": ["Returns one sentence."]
+    },
+    "CTX-02": {
+      "kind": "rubric",
+      "rubric": [
+        {"id": "cause", "points": 2, "criterion": "Identifies packet loss caused by the 08:55 network configuration change as the explanation consistent with recovery after reversion."},
+        {"id": "weakened", "points": 1, "criterion": "States that database saturation was weakened by normal database metrics."},
+        {"id": "deployment", "points": 1, "criterion": "Uses the failed rollback as evidence against the deployment being the complete cause."}
+      ],
+      "constraints": ["Maximum 80 words.", "Answers both parts."]
+    },
+    "CTX-03": {
+      "kind": "rubric",
+      "rubric": [
+        {"id": "csv", "points": 1, "criterion": "States that CSV conflicts because V3 removed it and JSON is the only supported format."},
+        {"id": "schema", "points": 1, "criterion": "States that schema_version is mandatory, not optional."},
+        {"id": "gzip", "points": 1, "criterion": "Does not incorrectly call already-satisfied gzip compression a conflict."}
+      ],
+      "constraints": ["Ignores superseded V1/V2 requirements."]
+    },
+    "WRITE-01": {
+      "kind": "rubric",
+      "rubric": [
+        {"id": "facts", "points": 2, "criterion": "Accurately reports trials, pass rates, cost, latency, repeat disagreement, and next step."},
+        {"id": "restraint", "points": 2, "criterion": "Does not declare a winner or use marketing language."},
+        {"id": "decision", "points": 1, "criterion": "Explains that the repeat disagreements and absent statistical test make deployment choice premature."}
+      ],
+      "constraints": ["Between 90 and 120 words.", "Factual executive-update style."]
+    },
+    "WRITE-02": {
+      "kind": "rubric",
+      "rubric": [
+        {"id": "tradeoffs", "points": 2, "criterion": "Accurately explains the memory reduction and throughput increase alongside the accuracy change from 81.2% to 79.9%."},
+        {"id": "uncertainty", "points": 2, "criterion": "Notes the 240-item benchmark and absence of uncertainty analysis without inventing significance."},
+        {"id": "interpretation", "points": 1, "criterion": "Does not claim the quantized model is better overall."}
+      ],
+      "constraints": ["Maximum 130 words.", "Does not label the accuracy change statistically significant or insignificant."]
+    },
+    "WRITE-03": {
+      "kind": "rubric",
+      "rubric": [
+        {"id": "grammar", "points": 2, "criterion": "Corrects grammar and improves clarity, including was run and outputs were scored."},
+        {"id": "facts", "points": 2, "criterion": "Preserves every factual claim, including 43 versus 39, four unreproduced outputs, two runs, same evaluator, and unknown cause."},
+        {"id": "format", "points": 1, "criterion": "Returns only the edited paragraph."}
+      ],
+      "constraints": ["Adds no new factual claim and removes none."]
+    }
+  }
+}
