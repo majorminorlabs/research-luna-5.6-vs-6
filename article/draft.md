@@ -156,7 +156,7 @@ If REAS-02 Repeat 1 had been retried until a completion appeared, the error rate
 
 Artifacts exist so a later reader can re-score with `scorers-1.2.0`, inspect the ERROR, re-read the pairwise skip, and check the four canonical run IDs against the frozen SHA-256. We are not asking anyone to trust a narrative that replaced the files.
 
-The public release keeps the frozen tasks, raw responses, scoring tables, judge artifacts, methodology, and generated figures together in the [publication repository](https://github.com/MAJORminorStudio/luna-5.6-vs-6-benchmark).
+The public release keeps the frozen tasks, raw responses, scoring tables, judge artifacts, methodology, and generated figures together in the [publication repository](https://github.com/majorminorlabs/research-luna-5.6-vs-6).
 
 The files also lock the scope: Codex CLI, ChatGPT OAuth, requested slugs `gpt-5.6-luna` and `gpt-6-luna`, identity `not_exposed`. Anyone who maps this article onto a ChatGPT UI label is making a claim this capture did not make.
 
