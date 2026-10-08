@@ -6,7 +6,7 @@ authors:
   - name: "MAJOR//minor Research"
 date-released: 2026-09-22
 version: "1.0.0"
-repository-code: "https://github.com/MAJORminorStudio/luna-5.6-vs-6-benchmark"
+repository-code: "https://github.com/majorminorlabs/research-luna-5.6-vs-6"
 abstract: >-
   A frozen 30-task, 120-generation comparison of GPT-5.6 Luna and GPT-6 Luna
   as exposed through Codex CLI authenticated via ChatGPT OAuth.
