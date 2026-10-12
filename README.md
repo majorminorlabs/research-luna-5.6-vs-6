@@ -8,7 +8,7 @@ We captured GPT-5.6 Luna before it disappeared, froze the benchmark, and ran the
 
 This repository is a bounded comparison of **GPT-5.6 Luna** and **GPT-6 Luna** as exposed through Codex CLI authenticated via ChatGPT OAuth. Requested model slugs were `gpt-5.6-luna` and `gpt-6-luna`. Provider-returned model identity was **not_exposed**. Equivalence to a ChatGPT model-picker label is **unverified**. Frozen benchmark: **luna-comparison-v1.0**.
 
-The longer write-up is in [article/draft.md](article/draft.md). Full measurements, task notes, and protocol detail are in [reports/full-report.md](reports/full-report.md).
+Full measurements, task notes, and protocol detail are in [reports/full-report.md](reports/full-report.md).
 
 ## Result summary
 
@@ -105,7 +105,6 @@ CLI versions differed (0.153.4 vs 0.156.0). Judge requested `gpt-6-sol`; identit
 Public repository: **luna-5.6-vs-6-benchmark**.
 
 - [reports/full-report.md](reports/full-report.md) — full report
-- [article/draft.md](article/draft.md) — article draft
 - [figures/](figures/) — publication figures and captions
 - [methodology/](methodology/) — protocol and scorer audit
 - [benchmark/](benchmark/) — frozen prompts, answer keys, and manifest
@@ -134,4 +133,4 @@ SHA-256: `ad1fd9a562246f195dc4ce0a14cab02abcd76e868b9f58dbc98fb2e12e77e12d`
 
 ## Citation note
 
-Cite this as a bounded Codex CLI comparison of requested slugs `gpt-5.6-luna` and `gpt-6-luna` on frozen benchmark **luna-comparison-v1.0** (SHA-256 above). Do not treat scores as a general ranking, a ChatGPT picker-label result, or a statistically significant difference. See [reports/full-report.md](reports/full-report.md) and [article/draft.md](article/draft.md).
+Cite this as a bounded Codex CLI comparison of requested slugs `gpt-5.6-luna` and `gpt-6-luna` on frozen benchmark **luna-comparison-v1.0** (SHA-256 above). Do not treat scores as a general ranking, a ChatGPT picker-label result, or a statistically significant difference. See [reports/full-report.md](reports/full-report.md).
