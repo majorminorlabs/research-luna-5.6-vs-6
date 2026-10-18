@@ -11,3 +11,8 @@ _internal/
 *PROMPT*
 *SOCIAL-DRAFTS*
 responses/
+
+# Article text and publication metadata belong in the site repository.
+ARTICLE.md
+ARTICLE-METADATA.json
+*-METADATA.json
