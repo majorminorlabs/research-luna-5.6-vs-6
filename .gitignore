@@ -3,3 +3,11 @@ __pycache__/
 *.pyc
 .venv/
 *.egg-info/
+
+# Keep operational publication material out of research commits.
+SOCIAL/
+_internal/
+*HANDOFF*
+*PROMPT*
+*SOCIAL-DRAFTS*
+responses/
