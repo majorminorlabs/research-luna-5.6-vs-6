@@ -4,11 +4,11 @@
 
 **GPT-6 Luna got faster. GPT-5.6 Luna still scored higher.**
 
-We captured GPT-5.6 Luna before it disappeared, froze the benchmark, and ran the same 30 tasks twice against GPT-6 Luna.
+I captured GPT-5.6 Luna before it disappeared, froze the benchmark, and ran the same 30 tasks twice against GPT-6 Luna.
 
 This repository is a bounded comparison of **GPT-5.6 Luna** and **GPT-6 Luna** as exposed through Codex CLI authenticated via ChatGPT OAuth. Requested model slugs were `gpt-5.6-luna` and `gpt-6-luna`. Provider-returned model identity was **not_exposed**. Equivalence to a ChatGPT model-picker label is **unverified**. Frozen benchmark: **luna-comparison-v1.0**.
 
-Full measurements, task notes, and protocol detail are in [reports/full-report.md](reports/full-report.md).
+Read the [published write-up](https://majorminor.xyz/notebook/gpt-6-luna-got-faster-gpt-5-6-scored-higher). Full measurements, task notes, and protocol detail are in [reports/full-report.md](reports/full-report.md).
 
 ## Result summary
 
