@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "luna-5-6-vs-luna-6-benchmark"
+version = "1.0.0"
+description = "A small provider-agnostic frozen benchmark comparing Luna 5.6 and Luna 6"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

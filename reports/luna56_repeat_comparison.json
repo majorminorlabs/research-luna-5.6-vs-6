@@ -1,0 +1,298 @@
+{
+  "benchmark_version": "luna-comparison-v1.0",
+  "frozen_commit": "de4283d944257b0fdaf15e116309b0df59e6e103",
+  "limitations": [
+    "Rubric and blind pairwise components remain pending; capability score remains pending.",
+    "A deterministic parser correction does not replace task-specific rubric judgment.",
+    "The exact ChatGPT-authenticated Codex route for gpt-6-luna was rejected by the current CLI/provider before generation."
+  ],
+  "original_scorer_version": "scorers-1.0.0",
+  "report_version": "luna56-repeat-comparison-1.0.0",
+  "revised_scorer_version": "scorers-1.1.0",
+  "runs": [
+    {
+      "original_aggregate": {
+        "capability_score": null,
+        "capability_score_status": "PENDING_COMPONENTS",
+        "component_averages": {
+          "constraints": 0.8846153846153846,
+          "deterministic": 0.7222222222222222
+        },
+        "deterministic_pass_rate": 0.6666666666666666,
+        "missing_components": [
+          "rubric",
+          "pairwise"
+        ],
+        "task_count": 30
+      },
+      "original_scores_artifact": "runs/20260922T210505Z-666f0e58c7/scores.jsonl",
+      "original_scores_sha256": "ddba1a63b732a61031e2e56d5eb269b091bd389413554f438bf7fd8a9c45b6a1",
+      "revised_aggregate": {
+        "capability_score": null,
+        "capability_score_status": "PENDING_COMPONENTS",
+        "component_averages": {
+          "constraints": 1.0,
+          "deterministic": 1.0
+        },
+        "deterministic_pass_rate": 1.0,
+        "missing_components": [
+          "rubric",
+          "pairwise"
+        ],
+        "task_count": 30
+      },
+      "revised_scores_artifact": "reports/luna56_repeat1_scores-scorers-1.1.0.jsonl",
+      "revised_scores_sha256": "51ec37a87175b7eef8b703dd9f1c57b417d26092532e4c417b529d25a35cb39d",
+      "role": "primary_repeat_1",
+      "run_id": "20260922T210505Z-666f0e58c7",
+      "status_counts": {
+        "ERROR": 1,
+        "SUCCESS": 29,
+        "TRUNCATED": 0
+      },
+      "terminal_error_tasks": [
+        "REAS-02"
+      ]
+    },
+    {
+      "original_aggregate": {
+        "capability_score": null,
+        "capability_score_status": "PENDING_COMPONENTS",
+        "component_averages": {
+          "constraints": 0.8076923076923077,
+          "deterministic": 0.9722222222222222
+        },
+        "deterministic_pass_rate": 0.9166666666666666,
+        "missing_components": [
+          "rubric",
+          "pairwise"
+        ],
+        "task_count": 30
+      },
+      "original_scores_artifact": "runs/20260922T212837Z-09b6935a04/scores.jsonl",
+      "original_scores_sha256": "83bdd4d0e428fd468c5eff37bcdf2728c8a80a3b7a4aa6f5f6a584f25c67aa76",
+      "revised_aggregate": {
+        "capability_score": null,
+        "capability_score_status": "PENDING_COMPONENTS",
+        "component_averages": {
+          "constraints": 0.9230769230769231,
+          "deterministic": 1.0
+        },
+        "deterministic_pass_rate": 1.0,
+        "missing_components": [
+          "rubric",
+          "pairwise"
+        ],
+        "task_count": 30
+      },
+      "revised_scores_artifact": "reports/luna56_repeat2_scores-scorers-1.1.0.jsonl",
+      "revised_scores_sha256": "2798c977c973d35b3f6575bf663c9474046e7eb96281c7e7d4ece2ea4a83066e",
+      "role": "primary_repeat_2",
+      "run_id": "20260922T212837Z-09b6935a04",
+      "status_counts": {
+        "ERROR": 0,
+        "SUCCESS": 30,
+        "TRUNCATED": 0
+      },
+      "terminal_error_tasks": []
+    }
+  ],
+  "scorer_changes": [
+    {
+      "classification": "BUG_FIX",
+      "original": {
+        "constraint_score": null,
+        "deterministic_score": 0.6666666666666666,
+        "scoring_status": "PENDING_RUBRIC_AND_PAIRWISE"
+      },
+      "rationale": "Inflected mutation/iteration wording was semantically equivalent to the frozen root-cause terms.",
+      "revised": {
+        "constraint_score": null,
+        "deterministic_score": 1.0,
+        "scoring_status": "PENDING_RUBRIC_AND_PAIRWISE"
+      },
+      "role": "primary_repeat_1",
+      "run_id": "20260922T210505Z-666f0e58c7",
+      "task_id": "CODE-01"
+    },
+    {
+      "classification": "ROBUSTNESS_FIX",
+      "original": {
+        "constraint_score": null,
+        "deterministic_score": 0.0,
+        "scoring_status": "PENDING_RUBRIC_AND_PAIRWISE"
+      },
+      "rationale": "The complete assignment was explicit in a Markdown table; the old parser only recognized inline separators.",
+      "revised": {
+        "constraint_score": null,
+        "deterministic_score": 1.0,
+        "scoring_status": "PENDING_RUBRIC_AND_PAIRWISE"
+      },
+      "role": "primary_repeat_1",
+      "run_id": "20260922T210505Z-666f0e58c7",
+      "task_id": "REAS-01"
+    },
+    {
+      "classification": "BUG_FIX",
+      "original": {
+        "constraint_score": null,
+        "deterministic_score": 0.0,
+        "scoring_status": "PENDING_RUBRIC_AND_PAIRWISE"
+      },
+      "rationale": "A terminal provider timeout is infrastructure/model execution failure and must not become a correctness zero.",
+      "revised": {
+        "constraint_score": null,
+        "deterministic_score": null,
+        "scoring_status": "NOT_SCORED_TERMINAL_ERROR"
+      },
+      "role": "primary_repeat_1",
+      "run_id": "20260922T210505Z-666f0e58c7",
+      "task_id": "REAS-02"
+    },
+    {
+      "classification": "ROBUSTNESS_FIX",
+      "original": {
+        "constraint_score": null,
+        "deterministic_score": 0.0,
+        "scoring_status": "PENDING_RUBRIC_AND_PAIRWISE"
+      },
+      "rationale": "Internal whitespace between schedule symbols is insignificant for this schedule-only output.",
+      "revised": {
+        "constraint_score": null,
+        "deterministic_score": 1.0,
+        "scoring_status": "PENDING_RUBRIC_AND_PAIRWISE"
+      },
+      "role": "primary_repeat_1",
+      "run_id": "20260922T210505Z-666f0e58c7",
+      "task_id": "REAS-04"
+    },
+    {
+      "classification": "BUG_FIX",
+      "original": {
+        "constraint_score": 0.0,
+        "deterministic_score": null,
+        "scoring_status": "PENDING_RUBRIC_AND_PAIRWISE"
+      },
+      "rationale": "Indented hypothesis bullets were nested under three ranked diagnostics and were not additional actions.",
+      "revised": {
+        "constraint_score": 1.0,
+        "deterministic_score": null,
+        "scoring_status": "PENDING_RUBRIC_AND_PAIRWISE"
+      },
+      "role": "primary_repeat_1",
+      "run_id": "20260922T210505Z-666f0e58c7",
+      "task_id": "REAS-05"
+    },
+    {
+      "classification": "BUG_FIX",
+      "original": {
+        "constraint_score": 0.5,
+        "deterministic_score": null,
+        "scoring_status": "PENDING_RUBRIC_AND_PAIRWISE"
+      },
+      "rationale": "Eight numbered bold ACTION labels were explicit step labels but were missed by the old parser.",
+      "revised": {
+        "constraint_score": 1.0,
+        "deterministic_score": null,
+        "scoring_status": "PENDING_RUBRIC_AND_PAIRWISE"
+      },
+      "role": "primary_repeat_1",
+      "run_id": "20260922T210505Z-666f0e58c7",
+      "task_id": "AGENT-01"
+    },
+    {
+      "classification": "BUG_FIX",
+      "original": {
+        "constraint_score": null,
+        "deterministic_score": 0.6666666666666666,
+        "scoring_status": "PENDING_RUBRIC_AND_PAIRWISE"
+      },
+      "rationale": "Inflected mutation/iteration wording was semantically equivalent to the frozen root-cause terms.",
+      "revised": {
+        "constraint_score": null,
+        "deterministic_score": 1.0,
+        "scoring_status": "PENDING_RUBRIC_AND_PAIRWISE"
+      },
+      "role": "primary_repeat_2",
+      "run_id": "20260922T212837Z-09b6935a04",
+      "task_id": "CODE-01"
+    },
+    {
+      "classification": "BUG_FIX",
+      "original": {
+        "constraint_score": 0.0,
+        "deterministic_score": null,
+        "scoring_status": "PENDING_RUBRIC_AND_PAIRWISE"
+      },
+      "rationale": "Indented hypothesis bullets were nested under three ranked diagnostics and were not additional actions.",
+      "revised": {
+        "constraint_score": 1.0,
+        "deterministic_score": null,
+        "scoring_status": "PENDING_RUBRIC_AND_PAIRWISE"
+      },
+      "role": "primary_repeat_2",
+      "run_id": "20260922T212837Z-09b6935a04",
+      "task_id": "REAS-05"
+    },
+    {
+      "classification": "BUG_FIX",
+      "original": {
+        "constraint_score": 0.5,
+        "deterministic_score": null,
+        "scoring_status": "PENDING_RUBRIC_AND_PAIRWISE"
+      },
+      "rationale": "Eight numbered bold ACTION labels were explicit step labels but were missed by the old parser.",
+      "revised": {
+        "constraint_score": 1.0,
+        "deterministic_score": null,
+        "scoring_status": "PENDING_RUBRIC_AND_PAIRWISE"
+      },
+      "role": "primary_repeat_2",
+      "run_id": "20260922T212837Z-09b6935a04",
+      "task_id": "AGENT-01"
+    },
+    {
+      "classification": "BUG_FIX",
+      "original": {
+        "constraint_score": null,
+        "deterministic_score": 0.6666666666666666,
+        "scoring_status": "PENDING_RUBRIC_AND_PAIRWISE"
+      },
+      "rationale": "Inflected mutation/iteration wording was semantically equivalent to the frozen root-cause terms.",
+      "revised": {
+        "constraint_score": null,
+        "deterministic_score": 1.0,
+        "scoring_status": "PENDING_RUBRIC_AND_PAIRWISE"
+      },
+      "role": "smoke",
+      "run_id": "20260922T210414Z-9ebb21cce7",
+      "task_id": "CODE-01"
+    }
+  ],
+  "special_findings": {
+    "ctx01_repeat1": {
+      "classification": "model_output_success_with_constraint_pass",
+      "one_sentence": true,
+      "raw_execution_matches_response_text": true
+    },
+    "ctx01_repeat2": {
+      "classification": "genuine_model_output_failure",
+      "extraction_contamination_found": false,
+      "one_sentence": false,
+      "raw_execution_matches_response_text": true,
+      "reason": "The final-answer file itself contains the long fixed prompt/source instead of the requested one-sentence answer.",
+      "word_count": 586
+    },
+    "reas01_repeat1": {
+      "classification": "explicit_assignment_parse_failure_with_separate_contradictory_claim",
+      "rubric_judgment_performed": false,
+      "table_assignment_matches_frozen_key": true
+    },
+    "reas02_repeat1": {
+      "classification": "infrastructure_model_execution_failure",
+      "correctness_scored_in_revised_artifact": false,
+      "timeout_seconds": 120.0
+    }
+  },
+  "tasks_sha256": "ad1fd9a562246f195dc4ce0a14cab02abcd76e868b9f58dbc98fb2e12e77e12d"
+}

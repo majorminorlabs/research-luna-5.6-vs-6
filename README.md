@@ -134,3 +134,7 @@ SHA-256: `ad1fd9a562246f195dc4ce0a14cab02abcd76e868b9f58dbc98fb2e12e77e12d`
 ## Citation note
 
 Cite this as a bounded Codex CLI comparison of requested slugs `gpt-5.6-luna` and `gpt-6-luna` on frozen benchmark **luna-comparison-v1.0** (SHA-256 above). Do not treat scores as a general ranking, a ChatGPT picker-label result, or a statistically significant difference. See [reports/full-report.md](reports/full-report.md).
+
+Tier 1 evidence added after the tagged release (2026-10-20): [source, protocols, historical audits and small run records](supplements/tier1-20261020/README.md).
+
+Plans, handoffs and drafts live in _private/ and are never published.

@@ -1,0 +1,13 @@
+# Content hashes and run/grading lookup labels, verified non-secret 2026-10-20.
+artifacts/runs/20260922T223440Z-c5ae59da51/metadata.json:generic-api-key:2
+artifacts/runs/20260922T221739Z-eb57b67d06/metadata.json:generic-api-key:2
+artifacts/runs/20260922T210505Z-666f0e58c7/metadata.json:generic-api-key:2
+artifacts/runs/20260922T212837Z-09b6935a04/metadata.json:generic-api-key:2
+benchmark/manifest.json:generic-api-key:8
+artifacts/capture-manifests/LUNA_56_CAPTURE_MANIFEST.json:generic-api-key:3
+LUNA_56_CAPTURE_MANIFEST.json:generic-api-key:3
+runs/20260922T210414Z-9ebb21cce7/metadata.json:generic-api-key:2
+runs/20260922T210505Z-666f0e58c7/metadata.json:generic-api-key:2
+runs/20260922T212837Z-09b6935a04/metadata.json:generic-api-key:2
+runs/20260922T221739Z-eb57b67d06/metadata.json:generic-api-key:2
+runs/20260922T223440Z-c5ae59da51/metadata.json:generic-api-key:2

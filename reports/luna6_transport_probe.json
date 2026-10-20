@@ -1,0 +1,24 @@
+{
+  "captured_at": "2026-09-22T21:41:37Z",
+  "benchmark_prompts_sent": 0,
+  "codex_version": "codex-cli 0.153.4",
+  "error": "The 'gpt-6-luna' model is not supported when using Codex with a ChatGPT account.",
+  "event_types": [
+    "thread.started",
+    "item.completed",
+    "turn.started",
+    "error",
+    "turn.failed"
+  ],
+  "final_answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "final_answer_bytes": 0,
+  "provider_returned_model": "not_exposed",
+  "requested_model": "gpt-6-luna",
+  "same_transport_as_luna56": true,
+  "status": "rejected_by_chatgpt_route",
+  "stdout_item_types": [
+    "error"
+  ],
+  "transport": "codex-cli-chatgpt-oauth",
+  "usage_present": false
+}
